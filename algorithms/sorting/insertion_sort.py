@@ -1,5 +1,27 @@
 # -*- coding: utf-8 -*-
-""" Implementation of Insertion Sort"""
+"""
+    insertion_sort.py
+
+    This module implements insertion sort on an unsorted list and returns a sorted list.
+
+    Insertion Sort Overview:
+    ------------------------
+    Uses insertion of elements in to the list to sort the list.
+
+    Pre: an unsorted list[0,...,n] of integers.
+
+    Post: returns a sorted list[0,...,n] in ascending order.
+
+    Time Complexity: O(n^2)
+
+    Space Complexity: O(n) total
+
+    Stable: Yes
+
+    Psuedo Code: CLRS. Introduction to Algorithms. 3rd ed.
+
+    insertion_sort.sort(list) -> sorted_list
+"""
 
 
 # 固定元素找位置

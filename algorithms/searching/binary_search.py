@@ -1,5 +1,24 @@
 # -*- coding:utf-8 -*-
-""" Implementation of Binary Search """
+"""
+    binary_search.py
+
+    This module implements binary search on a sorted list.
+
+    Binary Search Overview:
+    ------------------------
+    Recursively partitions the list until the key is found.
+
+    Pre: a sorted list[0,...n,] integers and the key to search for.
+
+    Post: returns the index of where the first element that matches the key.
+
+    Time Complexity:  O(lg n)
+
+    Psuedo Code: http://en.wikipedia.org/wiki/Binary_search
+
+    binary_search.search(sorted_list) -> integer
+    binary_search.search(sorted_list) -> False
+"""
 
 
 def search(seq, key):
