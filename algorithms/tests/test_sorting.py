@@ -59,14 +59,36 @@ class TestMergeSort(unittest.TestCase):
         self.assertIs(self.seq[-1], 9)
 
 
+class TestMergeSort(unittest.TestCase):
+    """
+    Tests Merge sort on a small range from 0-9
+    also tests merge function included in merge sort
+    """
+    def test_mergesort(self):
+        self.seq = range(10)
+        random.shuffle(self.seq)
+        self.seq = merge_sort.sort(self.seq)
+        self.assertIs(self.seq[0], 0)
+        self.assertIs(self.seq[-1], 9)
+
+    def test_merge(self):
+        self.seq1 = range(5)
+        self.seq2 = range(5,10)
+        self.seq = merge_sort.merge(self.seq1, self.seq2)
+        self.assertIs(self.seq[0], 0)
+        self.assertIs(self.seq[-1], 9)
+
+
 class TestQuickSort(unittest.TestCase):
     """
-    Tests Quick sort on a small range from 0-9
+    Test Quick sort on a small range from 0-9
+    also tests partition function included in quick sort.
     """
+
     def test_quicksort(self):
         self.seq = range(10)
         random.shuffle(self.seq)
-        quick_sort.sort(self.seq)
+        self.seq = quick_sort.sort(self.seq)
         self.assertIs(self.seq[0], 0)
         self.assertIs(self.seq[-1], 9)
 
