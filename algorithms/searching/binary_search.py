@@ -34,6 +34,6 @@ def search(seq, key):
         if seq[mid] > key:
             return search(seq[0:mid], key)
         elif seq[mid] < key:
-            return search(seq[mid+1:], key)
+            return search(seq[mid + 1:], key)
         else:
-            return True
+            return mid
