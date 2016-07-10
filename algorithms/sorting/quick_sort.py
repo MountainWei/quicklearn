@@ -4,7 +4,7 @@
 
 def sort(seq):
 
-    if len(seq) < 1:
+    if len(seq) <= 1:
         return seq
     else:
         pivot = seq[0]

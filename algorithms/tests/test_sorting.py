@@ -1,6 +1,7 @@
 import random
 import unittest
-from ..sorting import bubble_sort, insertion_sort, selection_sort, merge_sort, quick_sort
+from ..sorting import bubble_sort, insertion_sort, selection_sort, merge_sort, quick_sort, \
+                        comb_sort, heap_sort, shell_sort
 
 
 class TestBubbleSort(unittest.TestCase):
@@ -92,3 +93,40 @@ class TestQuickSort(unittest.TestCase):
         self.assertIs(self.seq[0], 0)
         self.assertIs(self.seq[-1], 9)
 
+
+class TestCombSort(unittest.TestCase):
+    """
+    Test Comb sort on a small range from 0-9
+    """
+
+    def test_combSort(self):
+        self.seq = range(10)
+        random.shuffle(self.seq)
+        self.seq = comb_sort.sort(self.seq)
+        self.assertIs(self.seq[0], 0)
+        self.assertIs(self.seq[-1], 9)
+
+
+class TestShellSort(unittest.TestCase):
+    """
+    Test Shell sort on a small range from 0-9.
+    """
+    def test_shellSort(self):
+        self.seq = range(10)
+        random.shuffle(self.seq)
+        self.seq = shell_sort.sort(self.seq)
+        self.assertIs(self.seq[0], 0)
+        self.assertIs(self.seq[-1], 9)
+
+
+class TestHeapSort(unittest.TestCase):
+    """
+    Test Heap sort on a small range from 0-9
+    """
+
+    def test_heapsort(self):
+        self.seq = range(10)
+        random.shuffle(self.seq)
+        self.seq = heap_sort.sort(self.seq)
+        self.assertIs(self.seq[0], 0)
+        self.assertIs(self.seq[-1], 9)
