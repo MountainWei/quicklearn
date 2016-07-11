@@ -1,7 +1,7 @@
 Algorithms: a module of useful algorithms for Python
 ====================================================
 
-This is an attempt to build a cohesive module of algorithms for Python.
+This is an attempt to build a cohesive module of algorithms in Python.
 
 The purpose of this repo is to be a learning tool for myself and others.
 
@@ -11,24 +11,34 @@ Algorithms implemented so far:
 ------------------------------
 
 **Sorting:**
+    - Bogo Sort
     - Bubble Sort
+    - Cocktail Sort
     - Comb Sort
     - Heap Sort
     - Insertion Sort
+    - Merge Sort
     - Quick Sort
     - Selection Sort
     - Shell Sort
-    - Bogo Sort
 
 **Searching:**
     - Binary Search
+    - Boyer-Moore-Horspool
     - Knuth-Morris-Pratt
+    - Rabin-Karp
 
 **Shuffling:**
-    - Knuth/Fisher-Yates Shuffle
+	- Knuth/Fisher-Yates Shuffle
 
 Installation:
 -------------
+
+To clone the repository in to your working directory:
+
+.. code::
+
+    $ git clone https://github.com/nryoung/algorithms.git
 
 Requirements are listed in :code:`requirements.txt`.
 
@@ -38,13 +48,6 @@ If you are using pip and virtualenv you can simply do:
 
     $ pip install -r requirements.txt
 
-To clone the repository simply:
-
-.. code::
-
-    $ git clone https://github.com/MountainWei/quicklearn.git
-
-in to your working directory.
 
 Usage:
 ------
@@ -60,7 +63,7 @@ Once cloned you can simply do the following in your program:
 All prequisites for the algorithms are listed in the source code for each algorithm.
 
 Tests:
-------------------------
+------
 
 Nose is used as the main test runner and all Unit Tests can be run by:
 
@@ -68,24 +71,25 @@ Nose is used as the main test runner and all Unit Tests can be run by:
 
     $ python algorithms/run_tests.py
 
+Contributing:
+-------------
+
+If there is an algorithm or data structure that you do not see, but would like to add please feel free to do a pull request. I only ask two things:
+
+1. For each algorithm and data structure you implement please have corresponding unit tests to prove correctness.
+2. Please make sure that your module follows similar style guidelines that are laid out in the other modules.
+
+I want to personally thank everybody that has contributed so far and your names will be added to :code:`AUTHORS.rst`.
+
 TODO:
 -----
 
-Below is an ever changing list of things that I would like to accomplish or implement. If you feel something needs to be added simply do a pull request.
-
-**Algorithms to implement:**
-    - Rabin-Karp
-    - Mersenne Twister
-    - UUID Generator
-    - Bloom Filters
-
-**Misc.:**
-    - Performance Tests
+See :code:`TODO.rst`.
 
 License:
 --------
 
-Copyright (c) 2016 by Liu Wei
+Copyright (c) 2012 by Nic Young and contributors. See AUTHORS.rst for more details
 
 Some rights reserved.
 

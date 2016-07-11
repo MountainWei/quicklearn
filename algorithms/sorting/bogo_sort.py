@@ -39,8 +39,6 @@ def sort(seq):
 
 
 def is_sorted(seq):
-    for i in xrange(1, len(seq)):
-        if seq[i-1] > seq[i]:
-            return False
-    return True
+    # notice the all function
+    return all(seq[i-1] <= seq[i] for i in xrange(1, len(seq)))
 

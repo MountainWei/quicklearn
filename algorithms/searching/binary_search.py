@@ -16,24 +16,21 @@
 
     Psuedo Code: http://en.wikipedia.org/wiki/Binary_search
 
-    binary_search.search(sorted_list) -> integer
-    binary_search.search(sorted_list) -> False
+    binary_search.search(sorted_list, key) -> integer
+    binary_search.search(sorted_list, key) -> False
 """
 
 
 def search(seq, key):
-    imin = 0
-    imax = len(seq) - 1
+    lo = 0
+    hi = len(seq) - 1
 
-    if imin > imax:
-        return False
-
-    else:
-        mid = len(seq) / 2
-
-        if seq[mid] > key:
-            return search(seq[0:mid], key)
-        elif seq[mid] < key:
-            return search(seq[mid + 1:], key)
+    while hi >= lo:
+        mid = lo + (hi - lo) // 2
+        if seq[mid] < key:
+            lo = mid + 1
+        elif seq[mid] > key:
+            hi = mid - 1
         else:
             return mid
+    return False
